@@ -1,0 +1,100 @@
+﻿@page
+@model AplicationNetRazor.Pages.Profesores.BorrarModel
+@{
+        ViewData["Title"] = "Borrar Profesor";
+}
+
+@if (Model.Mensaje != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @Model.Mensaje 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="card">
+    <div class="card-header bg-secondary text-white">
+        <h2 class="text-dark">Lista de Profesores</h2>  
+    </div>
+    <div class="card-body bg-secondary text-white">
+        <form method="post">
+
+            <input type="hidden" asp-for="Profesor.idProf" />
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container" style="padding:30px">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Profesor.Nombre"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Profesor.Nombre" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Profesor.Nombre" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Profesor.Apellido"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Profesor.Apellido" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Profesor.Apellido" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Profesor.esp"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Profesor.esp" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Profesor.esp" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Profesor.fecha_ing"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Profesor.fecha_ing" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Profesor.fecha_ing" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Profesor.fecha_nac"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Profesor.fecha_nac" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Profesor.fecha_nac " class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2 offset-sm-2">
+                            <input type="submit" value="Borrar" onclick="return confirm('esta seguro que desea eliminar el curso?')" class="btn btn-danger form-control" />
+                        </div>
+                        <div class="col-sm-4">
+                            <a asp-page="Index" class="btn btn-success form-control">Volver a lista</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

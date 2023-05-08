@@ -1,0 +1,116 @@
+﻿@page
+@model AplicationNetRazor.Pages.Alumnos.EditarModel
+@{
+            ViewData["Title"] = "Editar Alumno";
+}
+
+<div class="card bg-secondary text-white">
+    <div class="card-header text-white bg-dark mb-3">
+        <h2 class="text-white">Lista de Alumnos</h2>  
+    </div>
+    <div class="card-body ">
+        <form method="post">
+
+            <input type="hidden" asp-for="Alumno.idAlumno" />
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container " style="padding:30px ">
+                <div class="form-group ">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Alumno.Nombre"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Alumno.Nombre" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Alumno.Nombre" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Alumno.Apellido"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Alumno.Apellido" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Alumno.Apellido" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Alumno.Fecha_nac"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Alumno.Fecha_nac" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Alumno.Fecha_nac" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Alumno.Fecha_ing"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Alumno.Fecha_ing" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Alumno.Fecha_ing" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Alumno.Hora_ing"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Alumno.Hora_ing" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Alumno.Hora_ing" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Alumno.Cantidad_cursos"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Alumno.Cantidad_cursos" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Alumno.Cantidad_cursos" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2">  
+                            <label asp-for="Alumno.Fecha_egr"></label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Alumno.Fecha_egr" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Alumno.Fecha_egr" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-2 offset-sm-2">
+                            <input type="submit" value="Editar" class="btn btn-primary form-control" />
+                        </div>
+                        <div class="col-sm-4">
+                            <a asp-page="Index" class="btn btn-success form-control">Volver a lista</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
